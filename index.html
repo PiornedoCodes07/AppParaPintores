@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Pintores</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script defer src="/src/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <img id="navIcon" src="/src/assets/navigationBar.svg" alt="navicon">
+        <nav id="navBar">
+            <ul>
+                <li>
+                    <h3>Massa Corrida</h3>
+                    <input type="number">
+                </li>
+                <li>
+                    <h3>Tinta textura</h3>
+                    <input type="number">
+                </li>
+                <li>
+                    <h3>Grafiato</h3>
+                    <input type="number">
+                </li>
+                <li>
+                    <h3>Tinta Acrilica</h3>
+                    <input type="number">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div id="contentMain">
+            <div>
+                <h2>Largura:</h2>
+                <input type="number">
+                <select name="largura">
+                    <option value="M">M</option>
+                    <option value="Cm">Cm</option>
+                    <option value="MM">MM</option>
+                </select>
+                <h2>Comprimento:</h2>
+                <input type="number">
+                <select name="comprimento">
+                    <option value="M">M</option>
+                    <option value="Cm">Cm</option>
+                    <option value="MM">MM</option>
+                </select>
+            </div>
+            <button>Calcular</button>
+        </div>
+    </main>
+
+    <div>
+        <div id="modal">
+            <button>X</button>
+            <div>
+                <h2>Largura: <span>100</span></h2>
+                <h2>Centimetro: <span>100</span></h2>
+                <h2>Tipo de tinta: <span>Tinta Textura</span> por metro quadrado</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
