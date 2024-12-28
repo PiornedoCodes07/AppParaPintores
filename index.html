@@ -14,19 +14,19 @@
             <ul>
                 <li>
                     <h3>Massa Corrida</h3>
-                    <input type="number">
+                    <input id="mc" type="number">
                 </li>
                 <li>
                     <h3>Tinta textura</h3>
-                    <input type="number">
+                    <input id="tt" type="number">
                 </li>
                 <li>
                     <h3>Grafiato</h3>
-                    <input type="number">
+                    <input id="g" type="number">
                 </li>
                 <li>
                     <h3>Tinta Acrilica</h3>
-                    <input type="number">
+                    <input id="ta" type="number">
                 </li>
             </ul>
         </nav>
@@ -34,34 +34,30 @@
     <main id="main">
         <div id="contentMain">
             <div>
-                <h2>Largura:</h2>
-                <input type="number">
-                <select name="largura">
+                <h2>Altura:</h2>
+                <input id="width" type="number">
+                <select id="larguraMedida" name="largura">
                     <option value="M">M</option>
                     <option value="Cm">Cm</option>
                     <option value="MM">MM</option>
                 </select>
                 <h2>Comprimento:</h2>
-                <input type="number">
-                <select name="comprimento">
+                <input id="length" type="number">
+                <select id="comprimentoMedida" name="comprimento">
                     <option value="M">M</option>
                     <option value="Cm">Cm</option>
                     <option value="MM">MM</option>
                 </select>
+                <h2>Tipo da Tinta:</h2>
+                <select id="typePaint" name="tintas">
+                    <option value="mc">Massa Corrida</option>
+                    <option value="tt">Tinta textura</option>
+                    <option value="g">Grafiato</option>
+                    <option value="ta">Tinta Acrilica</option>
+                </select>
             </div>
-            <button>Calcular</button>
+            <button id="btnSubmit">Calcular</button>
         </div>
     </main>
-
-    <div>
-        <div id="modal">
-            <button>X</button>
-            <div>
-                <h2>Largura: <span>100</span></h2>
-                <h2>Centimetro: <span>100</span></h2>
-                <h2>Tipo de tinta: <span>Tinta Textura</span> por metro quadrado</h2>
-            </div>
-        </div>
-    </div>
 </body>
 </html>

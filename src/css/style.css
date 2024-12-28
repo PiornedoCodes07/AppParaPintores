@@ -15,6 +15,9 @@ button{
     border: none;
     padding: 0.5rem 2rem;
 }
+h1{
+    font-size: 3rem;
+}
 
 h2{
     font-size: 1.5rem;
@@ -71,4 +74,20 @@ main{
 select{
     border: none;
     height: 2.5rem;
+}
+#typePaint{
+    width: 100%;
+}
+.divModal{
+    box-shadow: 0px 0px 50px #000000ad;
+    background-color: var(--grey);
+    width: 90% ;
+    position: absolute;
+    z-index: 999;
+    height: 50%;
+    border-radius: 5px;
+    padding: 1rem;
+    & h2{
+        margin-top: 0.4rem;
+    }
 }
