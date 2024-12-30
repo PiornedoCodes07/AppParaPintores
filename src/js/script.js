@@ -13,6 +13,7 @@ iconNavBar.addEventListener("click", function () {
 });
 
 const submit = document.getElementById("btnSubmit");
+
 submit.addEventListener("click", function () {
   //Bloqueando a navbar quando clicado pra calcular
   iconNavBar.style.display = "none";
@@ -32,13 +33,31 @@ submit.addEventListener("click", function () {
   const g = isNaN(parseFloat(grafiato))? 0 : parseFloat(grafiato);
   const ta = isNaN(parseFloat(tintaAcrilica))? 0 : parseFloat(tintaAcrilica);
 
+  //Armazenando os dados no local storage:
+  localStorage.setItem("massaCorrida", mc);
+  localStorage.setItem("tintaTextura", tt);
+  localStorage.setItem("tintaGrafiato", g);
+  localStorage.setItem("tintaAcrílica", ta);
   //Largura e comprimento
   let widthFloat = parseFloat(width);
   let lengthFloat = parseFloat(length);
 
   // Verificação se as dimensões são válidas
   if (isNaN(widthFloat) || isNaN(lengthFloat)) {
-    alert("Por favor, insira valores válidos para largura e comprimento.");
+    // Exibe uma mensagem informando que falta dados
+    Toastify({
+        text: "Insira os dados Corretamente!",
+        duration: 2000,
+        close: true,
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true, 
+        style: {
+          background: "#ff0000",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+      iconNavBar.style.display = "flex";
     return;
   }
   //Pegando o select de Medidas
@@ -75,7 +94,6 @@ submit.addEventListener("click", function () {
   }
   //VARIAVEL COM O VALOR TOTAL DA MULTIPLICAÇÂO
   const total = totalWall * calSelect;
-  console.log(total);
 
   //Criando modal total
   const divModal = document.createElement("div");
@@ -126,3 +144,20 @@ submit.addEventListener("click", function () {
   divModal.appendChild(totalDesc);
   main.appendChild(divModal);
 });
+
+// Preencher os inputs com os dados do LocalStorage quando a página carregar
+window.addEventListener("load", function () {
+    const width = localStorage.getItem("width");
+    const length = localStorage.getItem("length");
+    const massaCorrida = localStorage.getItem("massaCorrida");
+    const tintaTextura = localStorage.getItem("tintaTextura");
+    const grafiato = localStorage.getItem("tintaGrafiato");
+    const tintaAcrilica = localStorage.getItem("tintaAcrílica");
+  
+    if (width) document.getElementById("width").value = width;
+    if (length) document.getElementById("length").value = length;
+    if (massaCorrida) document.getElementById("mc").value = massaCorrida;
+    if (tintaTextura) document.getElementById("tt").value = tintaTextura;
+    if (grafiato) document.getElementById("g").value = grafiato;
+    if (tintaAcrilica) document.getElementById("ta").value = tintaAcrilica;
+  });
