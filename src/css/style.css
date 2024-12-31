@@ -83,6 +83,7 @@ input {
   border-radius: 0.2rem;
   border: none;
   height: 2.5rem;
+  width: 70%;
   padding-left: 0.5rem;
 }
 
@@ -257,6 +258,9 @@ body.dark .sub-menu {
   #contentMain {
     width: 95%;
     padding: 0.5rem;
+  }
+  #icon{
+    left: 70%;
   }
 }
 
