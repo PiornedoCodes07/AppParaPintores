@@ -6,32 +6,41 @@
     <title>App Pintores</title>
     <link rel="stylesheet" href="/src/css/style.css">
     <script defer src="/src/js/script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="/src/assets/icon.png" type="image/x-icon">
     <!--Biblioteca ToastifyJs-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 </head>
-<body>
+<body id="body">
     <header>
-        <img id="navIcon" src="/src/assets/navigationBar.svg" alt="navicon">
+        <svg id="navIcon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
         <nav id="navBar">
-            <ul>
-                <li>
-                    <h3>Massa Corrida</h3>
-                    <input class="inputNav" id="mc" type="number" min="0" step="0.01">
-                </li>
-                <li>
-                    <h3>Tinta textura</h3>
-                    <input class="inputNav" id="tt" type="number" min="0" step="0.01">
-                </li>
-                <li>
-                    <h3>Grafiato</h3>
-                    <input class="inputNav" id="g" type="number" min="0" step="0.01">
-                </li>
-                <li>
-                    <h3>Tinta Acrilica</h3>
-                    <input class="inputNav" id="ta" type="number" min="0" step="0.01">
-                </li>
+            <div id="icon"></div>
+            <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M346-140 100-386q-10-10-15-22t-5-25q0-13 5-25t15-22l230-229-106-106 62-65 400 400q10 10 14.5 22t4.5 25q0 13-4.5 25T686-386L440-140q-10 10-22 15t-25 5q-13 0-25-5t-22-15Zm47-506L179-432h428L393-646Zm399 526q-36 0-61-25.5T706-208q0-27 13.5-51t30.5-47l42-54 44 54q16 23 30 47t14 51q0 37-26 62.5T792-120Z"/></svg>
+                <span>Tipos de Tintas</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+            </button>
+            <ul class="sub-menu">
+                <div>
+                    <li>
+                        <h3>Massa Corrida</h3>
+                        <input class="inputNav" id="mc" type="number" min="0" step="0.01">
+                    </li>
+                    <li>
+                        <h3>Tinta textura</h3>
+                        <input class="inputNav" id="tt" type="number" min="0" step="0.01">
+                    </li>
+                    <li>
+                        <h3>Grafiato</h3>
+                        <input class="inputNav" id="g" type="number" min="0" step="0.01">
+                    </li>
+                    <li>
+                        <h3>Tinta Acrilica</h3>
+                        <input class="inputNav" id="ta" type="number" min="0" step="0.01">
+                    </li>
+                </div>
             </ul>
         </nav>
     </header>

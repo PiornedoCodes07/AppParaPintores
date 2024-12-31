@@ -2,6 +2,13 @@ const iconNavBar = document.getElementById("navIcon");
 const navBar = document.getElementById("navBar");
 const main = document.getElementById("main");
 
+
+//Função nav bar submenu
+function toggleSubMenu(button){
+  button.nextElementSibling.classList.toggle('show')
+  button.classList.toggle('rotate')
+}
+
 iconNavBar.addEventListener("click", function () {
   navBar.classList.toggle("active");// Adiciona ou remove a classe 'active'
 });
@@ -149,3 +156,11 @@ window.addEventListener("load", function () {
     if (grafiato) document.getElementById("g").value = grafiato;
     if (tintaAcrilica) document.getElementById("ta").value = tintaAcrilica;
   });
+
+//Função Dark Mode
+const body = document.getElementById("body");
+const toggleDarkMode = document.getElementById("icon")
+
+toggleDarkMode.addEventListener("click", () => {
+  body.classList.toggle("dark");
+})

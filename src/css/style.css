@@ -1,114 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{ 
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    font-family: "Poppins", serif;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Poppins", serif;
 }
-body{
-    width: 100%;
-    height: 100%;
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--whiteBG);
 }
-button{
-    border: none;
-    padding: 0.5rem 2rem;
+#btnSubmit {
+  border: none;
+  padding: 0.5rem 2rem;
+  transition: 0.5s;
 }
-h1{
-    font-size: 3rem;
+#btnSubmit:hover{
+    scale: 1.1;
 }
-
-h2{
-    font-size: 1.5rem;
-}
-ul{
-    list-style: none;
+h1 {
+  font-size: 3rem;
 }
 
-:root{
-    --grey:#c2c1c1; 
-    --box-shadow-standard: 0px 0px 50px #000;
+h2 {
+  font-size: 1.5rem;
+}
+ul {
+  list-style: none;
 }
 
-#navIcon{
-    width: 2.7rem;
-    display: flex;
-    position: absolute;
-    z-index: 9999;
-    margin-left: 0.3rem;
+:root {
+  --grey: #dae0e8;
+  --box-shadow-standard: 0px 0px 50px #0000002b;
+  --blackBG: #131214;
+  --blackPrimary: #1c191f;
+  --blackSecundary: #2c2534;
+  --whiteBG: #e8edff;
+  --whitePrimary: #dce3ff;
 }
-#navBar{
-    position: absolute;
-    z-index: 1;
-    box-shadow: var(--box-shadow-standard);
+
+#navIcon {
+    fill: var(--blackPrimary);
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  position: absolute;
+  z-index: 9999;
+  margin-left: 0.3rem;
+}
+#navBar {
+  position: absolute;
+  z-index: 1;
+  box-shadow: var(--box-shadow-standard);
+  background-color: var(--whitePrimary);
+  height: 100vh;
+  width: 0;
+  padding: 5rem 0 0 0;
+  overflow: hidden;
+  transition: 300ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+#navBar.active {
+  width: 55%;
+  padding: 5rem 0 0 0.5rem;
+}
+.inputNav {
+  width: 90%;
+}
+input {
+  border-radius: 0.2rem;
+  border: none;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contentMain {
+  background-color: var(--whitePrimary);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+select {
+  border: none;
+  height: 2.5rem;
+}
+#typePaint {
+  width: 100%;
+}
+.divModal {
+  box-shadow: var(--box-shadow-standard);
+  background-color: var(--whitePrimary);
+  width: 90%;
+  position: absolute;
+  z-index: 999;
+  height: 50%;
+  border-radius: 5px;
+  padding: 1rem;
+  & h2 {
+    margin-top: 0.4rem;
+  }
+}
+.dropdown-btn {
+  background-color: var(--whitePrimary);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  padding: 0.7rem;
+  border: none;
+  color: var(--white);
+  &:hover {
     background-color: var(--grey);
-    height: 100vh;
-    width: 0;
-    padding: 5rem 0 0 0 ;
+  }
+}
+
+.sub-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 300ms ease-in-out;
+
+  > div {
     overflow: hidden;
-    transition: 300ms ease-in-out;
+  }
 }
-#navBar.active{
-    width: 55%;
-    padding: 5rem 0 0 0.5rem; 
+.sub-menu.show {
+  grid-template-rows: 1fr;
 }
-/* Adiciona uma transição para os itens dentro da navbar */
-#navBar ul li {
-    opacity: 0;
-    overflow: hidden;
-    width: 0;
-    transition: opacity 300ms ease-in-out;
+.dropdown-btn svg {
+  transition: 200ms ease;
+  fill: var(--blackPrimary);
+}
+.rotate svg:last-child {
+  rotate: 180deg;
+}
+/*White Mode*/
+#icon {
+  background-color: var(--black);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.7%;
+  left: 90%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#icon::before{
+    content: "\f186";
+    font-family: fontAwesome;
+    font-size: 1.6rem;
+    color: var(--white);
 }
 
-/* Quando a navbar está aberta, os itens aparecem */
-#navBar.active ul li {
-    width: 90%;
-    opacity: 100;
+/*Dark Mode*/
+body.dark{
+    background-color: var(--blackPrimary);
 }
-.inputNav{
-    width: 90%;
+body.dark #icon::before{
+    content: "\f185";
+    color: #fff;
 }
-input{
-    border-radius: 0.2rem;
-    border: none;
-    height: 2.5rem;
-    padding-left: 0.5rem;
+body.dark #navIcon{
+    fill: #fff;
 }
-main{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body.dark .divModal{
+    background-color: var(--blackSecundary);
+    color: #fff;
 }
-#contentMain{
-    background-color: var(--grey);
-    border-radius: 1rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+body.dark #contentMain{
+    background-color: var(--blackSecundary);
+    color: #fff;
 }
-select{
-    border: none;
-    height: 2.5rem;
+body.dark #navBar{
+    background-color: var(--blackSecundary);
 }
-#typePaint{
-    width: 100%;
-}
-.divModal{
-    box-shadow: var(--box-shadow-standard);
-    background-color: var(--grey);
-    width: 90% ;
-    position: absolute;
-    z-index: 999;
-    height: 50%;
-    border-radius: 5px;
-    padding: 1rem;
-    & h2{
-        margin-top: 0.4rem;
+body.dark .dropdown-btn{
+    background-color: var(--blackSecundary);
+    color: #fff;
+    &:hover{
+        background-color: var(--blackBG);
     }
+}
+body.dark .dropdown-btn svg{
+    fill: #fff;
+}
+body.dark .sub-menu{
+    color: #fff;
 }
