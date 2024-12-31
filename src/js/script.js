@@ -3,20 +3,13 @@ const navBar = document.getElementById("navBar");
 const main = document.getElementById("main");
 
 iconNavBar.addEventListener("click", function () {
-  if (navBar.style.display == "none") {
-    navBar.style.display = "flex";
-    main.style.filter = "blur(3px)";
-  } else {
-    navBar.style.display = "none";
-    main.style.filter = "blur(0px)";
-  }
+  navBar.classList.toggle("active"); 
+  console.log("navbarclicada")// Adiciona ou remove a classe 'active'
 });
 
 const submit = document.getElementById("btnSubmit");
 
 submit.addEventListener("click", function () {
-  //Bloqueando a navbar quando clicado pra calcular
-  iconNavBar.style.display = "none";
 
   const width = document.getElementById("width").value;
   const length = document.getElementById("length").value;
@@ -147,15 +140,11 @@ submit.addEventListener("click", function () {
 
 // Preencher os inputs com os dados do LocalStorage quando a página carregar
 window.addEventListener("load", function () {
-    const width = localStorage.getItem("width");
-    const length = localStorage.getItem("length");
     const massaCorrida = localStorage.getItem("massaCorrida");
     const tintaTextura = localStorage.getItem("tintaTextura");
     const grafiato = localStorage.getItem("tintaGrafiato");
     const tintaAcrilica = localStorage.getItem("tintaAcrílica");
   
-    if (width) document.getElementById("width").value = width;
-    if (length) document.getElementById("length").value = length;
     if (massaCorrida) document.getElementById("mc").value = massaCorrida;
     if (tintaTextura) document.getElementById("tt").value = tintaTextura;
     if (grafiato) document.getElementById("g").value = grafiato;

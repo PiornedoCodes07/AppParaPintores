@@ -8,8 +8,8 @@
     font-family: "Poppins", serif;
 }
 body{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 button{
     border: none;
@@ -28,6 +28,7 @@ ul{
 
 :root{
     --grey:#c2c1c1; 
+    --box-shadow-standard: 0px 0px 50px #000;
 }
 
 #navIcon{
@@ -38,22 +39,37 @@ ul{
     margin-left: 0.3rem;
 }
 #navBar{
+    display: flex;
     position: absolute;
     z-index: 1;
-    box-shadow: 0px 0px 50px #000;
+    box-shadow: var(--box-shadow-standard);
     background-color: var(--grey);
     height: 100vh;
+    width: 0;
+    padding: 5rem 0 0 0 ;
+    overflow: hidden;
+    transition: width 200ms ease-in ;
+}
+#navBar.active{
     width: 55%;
-    padding: 5rem 0 0 0.5rem;
+    padding: 5rem 0 0 0.5rem; 
+}
+/* Adiciona uma transição para os itens dentro da navbar */
+#navBar ul li {
+    padding-top: 2rem;
+    opacity: 0;
+    transition: opacity 7ms ease-in;
+}
+
+/* Quando a navbar está aberta, os itens aparecem */
+#navBar.active ul li {
+    opacity: 100;
 }
 input{
     border-radius: 0.2rem;
     border: none;
     height: 2.5rem;
     padding-left: 0.5rem;
-}
-li{
-    padding-top: 2rem;
 }
 main{
     width: 100vw;
@@ -64,6 +80,7 @@ main{
 }
 #contentMain{
     background-color: var(--grey);
+    border-radius: 1rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -79,7 +96,7 @@ select{
     width: 100%;
 }
 .divModal{
-    box-shadow: 0px 0px 50px #000000ad;
+    box-shadow: var(--box-shadow-standard);
     background-color: var(--grey);
     width: 90% ;
     position: absolute;

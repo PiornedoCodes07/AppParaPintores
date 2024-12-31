@@ -6,6 +6,7 @@
     <title>App Pintores</title>
     <link rel="stylesheet" href="/src/css/style.css">
     <script defer src="/src/js/script.js"></script>
+    <link rel="shortcut icon" href="/src/assets/icon.png" type="image/x-icon">
     <!--Biblioteca ToastifyJs-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
@@ -18,19 +19,19 @@
             <ul>
                 <li>
                     <h3>Massa Corrida</h3>
-                    <input id="mc" type="number">
+                    <input id="mc" type="number" min="0" step="0.01">
                 </li>
                 <li>
                     <h3>Tinta textura</h3>
-                    <input id="tt" type="number">
+                    <input id="tt" type="number" min="0" step="0.01">
                 </li>
                 <li>
                     <h3>Grafiato</h3>
-                    <input id="g" type="number">
+                    <input id="g" type="number" min="0" step="0.01">
                 </li>
                 <li>
                     <h3>Tinta Acrilica</h3>
-                    <input id="ta" type="number">
+                    <input id="ta" type="number" min="0" step="0.01">
                 </li>
             </ul>
         </nav>
@@ -39,14 +40,14 @@
         <div id="contentMain">
             <div>
                 <h2>Altura:</h2>
-                <input id="width" type="number">
+                <input id="width" type="number" min="0" step="0.01">
                 <select id="larguraMedida" name="largura">
                     <option value="M">M</option>
                     <option value="Cm">Cm</option>
                     <option value="MM">MM</option>
                 </select>
                 <h2>Comprimento:</h2>
-                <input id="length" type="number">
+                <input id="length" type="number" min="0" step="0.01">
                 <select id="comprimentoMedida" name="comprimento">
                     <option value="M">M</option>
                     <option value="Cm">Cm</option>
