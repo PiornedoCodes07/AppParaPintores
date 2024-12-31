@@ -72,7 +72,6 @@ document.getElementById("perfil-amarelo").addEventListener("click", () => {
 document.getElementById("perfil-verde").addEventListener("click", () => {
   setActiveButton("perfil-verde");
 
-
   const massaCorridaPreco = pegarPrecoTinta("massaCorrida", "verde");
   const tintaTexturaPreco = pegarPrecoTinta("tintaTextura", "verde");
   const grafiatoPreco = pegarPrecoTinta("grafiato", "verde");
@@ -95,7 +94,6 @@ document.getElementById("perfil-verde").addEventListener("click", () => {
 
 document.getElementById("perfil-azul").addEventListener("click", () => {
   setActiveButton("perfil-azul");
-
 
   const massaCorridaPreco = pegarPrecoTinta("massaCorrida", "azul");
   const tintaTexturaPreco = pegarPrecoTinta("tintaTextura", "azul");

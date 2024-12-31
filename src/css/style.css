@@ -13,11 +13,16 @@ body {
   height: 100%;
   background-color: var(--whiteBG);
 }
-
 #btnSubmit {
   border: none;
   padding: 0.5rem 2rem;
   transition: 0.5s;
+}
+a,
+button,
+svg,
+#icon {
+  -webkit-tap-highlight-color: transparent;
 }
 
 #btnSubmit:hover {
@@ -37,7 +42,7 @@ ul {
 }
 
 :root {
-  --grey: #F0F0F0;
+  --grey: #f0f0f0;
   --box-shadow-standard: 0px 0px 50px #0000002b;
   --blackBG: #131214;
   --blackPrimary: #1c191f;
@@ -74,10 +79,10 @@ ul {
   width: 55%;
   padding: 5rem 0 0 0.5rem;
 }
-.inputSection{
+.inputSection {
   display: flex;
   gap: 0.2rem;
-  & input{
+  & input {
     width: 7rem;
   }
 }
@@ -107,10 +112,10 @@ main {
   align-items: center;
   gap: 2rem;
 }
-#buttonsPerfil{
+#buttonsPerfil {
   display: flex;
   gap: 2rem;
-  & button{
+  & button {
     background-color: var(--grey);
     border: none;
     border-radius: 50%;
@@ -123,9 +128,9 @@ main {
     transition: 0.5s;
   }
 }
-#buttonsPerfil button:hover{
+#buttonsPerfil button:hover {
   background-color: var(--blackSecundary);
-  & svg{
+  & svg {
     fill: var(--whiteBG);
   }
 }
@@ -135,7 +140,7 @@ main {
   scale: 1.1; /* Aumenta o tamanho como efeito de destaque */
 }
 
-#buttonsPerfil button  svg {
+#buttonsPerfil button svg {
   fill: var(--blackBG);
 }
 #buttonsPerfil button.active svg {
@@ -265,22 +270,21 @@ body.dark .dropdown-btn svg {
 body.dark .sub-menu {
   color: #fff;
 }
-body.dark #buttonsPerfil button svg{
+body.dark #buttonsPerfil button svg {
   fill: var(--blackBG);
 }
-body.dark #buttonsPerfil button.active{
+body.dark #buttonsPerfil button.active {
   background-color: var(--blackBG);
-  & svg{
+  & svg {
     fill: var(--whiteBG);
   }
 }
-body.dark #buttonsPerfil button:hover{
+body.dark #buttonsPerfil button:hover {
   background-color: var(--blackBG);
-  & svg{
+  & svg {
     fill: var(--whiteBG);
   }
 }
-
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -310,7 +314,7 @@ body.dark #buttonsPerfil button:hover{
     width: 95%;
     padding: 0.5rem;
   }
-  #icon{
+  #icon {
     left: 70%;
   }
 }
