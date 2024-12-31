@@ -158,9 +158,31 @@ window.addEventListener("load", function () {
   });
 
 //Função Dark Mode
-const body = document.getElementById("body");
-const toggleDarkMode = document.getElementById("icon")
+const body = document.getElementById('body');
+const icon = document.getElementById('icon');
 
-toggleDarkMode.addEventListener("click", () => {
-  body.classList.toggle("dark");
-})
+// Função para ativar ou desativar o modo dark
+function toggleDarkMode() {
+    body.classList.toggle('dark');
+    if (body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark'); // Armazena no localStorage que o tema é dark
+    } else {
+        localStorage.setItem('theme', 'light'); // Armazena no localStorage que o tema é light
+    }
+}
+
+// Verifica o tema salvo no localStorage ao carregar a página
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.classList.add(savedTheme); // Adiciona a classe 'dark' ou 'light' dependendo do valor armazenado
+    } else {
+        localStorage.setItem('theme', 'light'); // Define o tema padrão como light se não houver nada armazenado
+    }
+}
+
+// Ativa o modo escuro ao clicar no ícone
+icon.addEventListener('click', toggleDarkMode);
+
+// Carrega o tema ao carregar a página
+loadTheme();
