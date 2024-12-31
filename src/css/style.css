@@ -37,7 +37,7 @@ ul {
 }
 
 :root {
-  --grey: #dae0e8;
+  --grey: #F0F0F0;
   --box-shadow-standard: 0px 0px 50px #0000002b;
   --blackBG: #131214;
   --blackPrimary: #1c191f;
@@ -74,16 +74,18 @@ ul {
   width: 55%;
   padding: 5rem 0 0 0.5rem;
 }
-
-.inputNav {
-  width: 90%;
+.inputSection{
+  display: flex;
+  gap: 0.2rem;
+  & input{
+    width: 7rem;
+  }
 }
 
 input {
   border-radius: 0.2rem;
   border: none;
   height: 2.5rem;
-  width: 70%;
   padding-left: 0.5rem;
 }
 
@@ -105,7 +107,44 @@ main {
   align-items: center;
   gap: 2rem;
 }
-
+#buttonsPerfil{
+  display: flex;
+  gap: 2rem;
+  & button{
+    background-color: var(--grey);
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+}
+#buttonsPerfil button:hover{
+  scale: 1.1;
+  background-color: var(--blackSecundary);
+}
+#buttonsPerfil button svg{
+  fill: var(--blackBG);
+}
+#perfil-amarelo:hover{
+  & svg{
+    fill: rgb(255, 238, 0);
+  }
+}
+#perfil-verde:hover{
+  & svg{
+    fill: rgb(20, 236, 23);
+  }
+}
+#perfil-azul:hover{
+  & svg{
+    fill: rgb(0, 157, 255);
+  }
+}
 select {
   border: none;
   height: 2.5rem;
