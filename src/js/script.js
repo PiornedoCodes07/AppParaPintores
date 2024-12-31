@@ -3,8 +3,7 @@ const navBar = document.getElementById("navBar");
 const main = document.getElementById("main");
 
 iconNavBar.addEventListener("click", function () {
-  navBar.classList.toggle("active"); 
-  console.log("navbarclicada")// Adiciona ou remove a classe 'active'
+  navBar.classList.toggle("active");// Adiciona ou remove a classe 'active'
 });
 
 const submit = document.getElementById("btnSubmit");
