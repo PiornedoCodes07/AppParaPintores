@@ -7,19 +7,23 @@
   font-size: 16px;
   font-family: "Poppins", serif;
 }
+
 body {
   width: 100%;
   height: 100%;
   background-color: var(--whiteBG);
 }
+
 #btnSubmit {
   border: none;
   padding: 0.5rem 2rem;
   transition: 0.5s;
 }
-#btnSubmit:hover{
-    scale: 1.1;
+
+#btnSubmit:hover {
+  scale: 1.1;
 }
+
 h1 {
   font-size: 3rem;
 }
@@ -27,6 +31,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
 }
+
 ul {
   list-style: none;
 }
@@ -42,7 +47,7 @@ ul {
 }
 
 #navIcon {
-    fill: var(--blackPrimary);
+  fill: var(--blackPrimary);
   width: 3.5rem;
   height: 3.5rem;
   display: flex;
@@ -50,6 +55,7 @@ ul {
   z-index: 9999;
   margin-left: 0.3rem;
 }
+
 #navBar {
   position: absolute;
   z-index: 1;
@@ -63,19 +69,23 @@ ul {
   display: flex;
   flex-direction: column;
 }
+
 #navBar.active {
   width: 55%;
   padding: 5rem 0 0 0.5rem;
 }
+
 .inputNav {
   width: 90%;
 }
+
 input {
   border-radius: 0.2rem;
   border: none;
   height: 2.5rem;
   padding-left: 0.5rem;
 }
+
 main {
   width: 100vw;
   height: 100vh;
@@ -83,6 +93,7 @@ main {
   align-items: center;
   justify-content: center;
 }
+
 #contentMain {
   background-color: var(--whitePrimary);
   border-radius: 1rem;
@@ -93,13 +104,16 @@ main {
   align-items: center;
   gap: 2rem;
 }
+
 select {
   border: none;
   height: 2.5rem;
 }
+
 #typePaint {
   width: 100%;
 }
+
 .divModal {
   box-shadow: var(--box-shadow-standard);
   background-color: var(--whitePrimary);
@@ -113,6 +127,7 @@ select {
     margin-top: 0.4rem;
   }
 }
+
 .dropdown-btn {
   background-color: var(--whitePrimary);
   border-radius: 0.5rem;
@@ -131,21 +146,24 @@ select {
   display: grid;
   grid-template-rows: 0fr;
   transition: 300ms ease-in-out;
-
   > div {
     overflow: hidden;
   }
 }
+
 .sub-menu.show {
   grid-template-rows: 1fr;
 }
+
 .dropdown-btn svg {
   transition: 200ms ease;
   fill: var(--blackPrimary);
 }
+
 .rotate svg:last-child {
   rotate: 180deg;
 }
+
 /*White Mode*/
 #icon {
   background-color: var(--black);
@@ -160,45 +178,118 @@ select {
   justify-content: center;
   align-items: center;
 }
-#icon::before{
-    content: "\f186";
-    font-family: fontAwesome;
-    font-size: 1.6rem;
-    color: var(--white);
+
+#icon::before {
+  content: "\f186";
+  font-family: fontAwesome;
+  font-size: 1.6rem;
+  color: var(--white);
 }
 
 /*Dark Mode*/
-body.dark{
-    background-color: var(--blackPrimary);
+body.dark {
+  background-color: var(--blackPrimary);
 }
-body.dark #icon::before{
-    content: "\f185";
-    color: #fff;
+
+body.dark #icon::before {
+  content: "\f185";
+  color: #fff;
 }
-body.dark #navIcon{
-    fill: #fff;
+
+body.dark #navIcon {
+  fill: #fff;
 }
-body.dark .divModal{
-    background-color: var(--blackSecundary);
-    color: #fff;
+
+body.dark .divModal {
+  background-color: var(--blackSecundary);
+  color: #fff;
 }
-body.dark #contentMain{
-    background-color: var(--blackSecundary);
-    color: #fff;
+
+body.dark #contentMain {
+  background-color: var(--blackSecundary);
+  color: #fff;
 }
-body.dark #navBar{
-    background-color: var(--blackSecundary);
+
+body.dark #navBar {
+  background-color: var(--blackSecundary);
 }
-body.dark .dropdown-btn{
-    background-color: var(--blackSecundary);
-    color: #fff;
-    &:hover{
-        background-color: var(--blackBG);
-    }
+
+body.dark .dropdown-btn {
+  background-color: var(--blackSecundary);
+  color: #fff;
+  &:hover {
+    background-color: var(--blackBG);
+  }
 }
-body.dark .dropdown-btn svg{
-    fill: #fff;
+
+body.dark .dropdown-btn svg {
+  fill: #fff;
 }
-body.dark .sub-menu{
-    color: #fff;
+
+body.dark .sub-menu {
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #navBar.active {
+    width: 70%;
+  }
+
+  #btnSubmit {
+    padding: 0.5rem 1rem;
+  }
+
+  #navIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  #contentMain {
+    width: 95%;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #navBar.active {
+    width: 80%;
+  }
+
+  #btnSubmit {
+    padding: 0.3rem 0.8rem;
+  }
+
+  #navIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  #contentMain {
+    width: 90%;
+    padding: 0.5rem;
+  }
+
+  .divModal {
+    width: 100%;
+    height: 60%;
+  }
 }
