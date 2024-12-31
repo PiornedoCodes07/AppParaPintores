@@ -14,6 +14,16 @@ let descPaint = "";
 //tinta select
 const selectPaint = document.getElementById("typePaint");
 
+// Função para ativar um botão e desativar os outros
+function setActiveButton(buttonId) {
+  // Remove a classe 'active' de todos os botões
+  const buttons = document.querySelectorAll("#buttonsPerfil button");
+  buttons.forEach((button) => button.classList.remove("active"));
+
+  // Adiciona a classe 'active' ao botão clicado
+  const activeButton = document.getElementById(buttonId);
+  activeButton.classList.add("active");
+}
 //tintas calculo
 // Funções para pegar o valor das tintas com base no perfil do cliente
 function pegarPrecoTinta(tinta, perfilCliente) {
@@ -37,6 +47,8 @@ function pegarPrecoTinta(tinta, perfilCliente) {
 }
 // Funções para quando o cliente selecionar o perfil (cor)
 document.getElementById("perfil-amarelo").addEventListener("click", () => {
+  setActiveButton("perfil-amarelo");
+
   const massaCorridaPreco = pegarPrecoTinta("massaCorrida", "amarelo");
   const tintaTexturaPreco = pegarPrecoTinta("tintaTextura", "amarelo");
   const grafiatoPreco = pegarPrecoTinta("grafiato", "amarelo");
@@ -58,6 +70,9 @@ document.getElementById("perfil-amarelo").addEventListener("click", () => {
 });
 
 document.getElementById("perfil-verde").addEventListener("click", () => {
+  setActiveButton("perfil-verde");
+
+
   const massaCorridaPreco = pegarPrecoTinta("massaCorrida", "verde");
   const tintaTexturaPreco = pegarPrecoTinta("tintaTextura", "verde");
   const grafiatoPreco = pegarPrecoTinta("grafiato", "verde");
@@ -79,6 +94,9 @@ document.getElementById("perfil-verde").addEventListener("click", () => {
 });
 
 document.getElementById("perfil-azul").addEventListener("click", () => {
+  setActiveButton("perfil-azul");
+
+
   const massaCorridaPreco = pegarPrecoTinta("massaCorrida", "azul");
   const tintaTexturaPreco = pegarPrecoTinta("tintaTextura", "azul");
   const grafiatoPreco = pegarPrecoTinta("grafiato", "azul");

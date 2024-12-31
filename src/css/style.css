@@ -124,26 +124,22 @@ main {
   }
 }
 #buttonsPerfil button:hover{
-  scale: 1.1;
   background-color: var(--blackSecundary);
+  & svg{
+    fill: var(--whiteBG);
+  }
 }
-#buttonsPerfil button svg{
+
+#buttonsPerfil button.active {
+  background-color: var(--blackSecundary); /* Cor quando o botão está ativo */
+  scale: 1.1; /* Aumenta o tamanho como efeito de destaque */
+}
+
+#buttonsPerfil button  svg {
   fill: var(--blackBG);
 }
-#perfil-amarelo:hover{
-  & svg{
-    fill: rgb(255, 238, 0);
-  }
-}
-#perfil-verde:hover{
-  & svg{
-    fill: rgb(20, 236, 23);
-  }
-}
-#perfil-azul:hover{
-  & svg{
-    fill: rgb(0, 157, 255);
-  }
+#buttonsPerfil button.active svg {
+  fill: var(--whiteBG);
 }
 select {
   border: none;
@@ -269,6 +265,22 @@ body.dark .dropdown-btn svg {
 body.dark .sub-menu {
   color: #fff;
 }
+body.dark #buttonsPerfil button svg{
+  fill: var(--blackBG);
+}
+body.dark #buttonsPerfil button.active{
+  background-color: var(--blackBG);
+  & svg{
+    fill: var(--whiteBG);
+  }
+}
+body.dark #buttonsPerfil button:hover{
+  background-color: var(--blackBG);
+  & svg{
+    fill: var(--whiteBG);
+  }
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
