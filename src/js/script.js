@@ -59,12 +59,16 @@ document.getElementById("perfil-amarelo").addEventListener("click", () => {
 
   // Exibe o preço selecionado (somando os preços como exemplo)
   if (selectPaintValue == "mc") {
+    descPaint = "Massa Corrida"
     valorTintaSelecionada = massaCorridaPreco;
   } else if (selectPaintValue == "tt") {
+    descPaint = "Tinta Textura"
     valorTintaSelecionada = tintaTexturaPreco;
   } else if (selectPaintValue == "g") {
+    descPaint = "Grafiato"
     valorTintaSelecionada = grafiatoPreco;
   } else if (selectPaintValue == "ta") {
+    descPaint = "Tinta Acrílica"
     valorTintaSelecionada = tintaAcrilicaPreco;
   }
 });
@@ -83,12 +87,16 @@ document.getElementById("perfil-verde").addEventListener("click", () => {
   // Exibe o preço selecionado (somando os preços como exemplo)
   if (selectPaintValue == "mc") {
     valorTintaSelecionada = massaCorridaPreco;
+    descPaint = "Massa Corrida"
   } else if (selectPaintValue == "tt") {
     valorTintaSelecionada = tintaTexturaPreco;
+    descPaint = "Tinta Textura"
   } else if (selectPaintValue == "g") {
     valorTintaSelecionada = grafiatoPreco;
+    descPaint = "Grafiato"
   } else if (selectPaintValue == "ta") {
     valorTintaSelecionada = tintaAcrilicaPreco;
+    descPaint = "Tinta Acrílica"
   }
 });
 
@@ -106,12 +114,16 @@ document.getElementById("perfil-azul").addEventListener("click", () => {
   // Exibe o preço selecionado (somando os preços como exemplo)
   if (selectPaintValue == "mc") {
     valorTintaSelecionada = massaCorridaPreco;
+    descPaint = "Massa Corrida"
   } else if (selectPaintValue == "tt") {
     valorTintaSelecionada = tintaTexturaPreco;
+    descPaint = "Tinta Textura"
   } else if (selectPaintValue == "g") {
     valorTintaSelecionada = grafiatoPreco;
+    descPaint = "Grafiato"
   } else if (selectPaintValue == "ta") {
     valorTintaSelecionada = tintaAcrilicaPreco;
+    descPaint = "Tinta Acrílica"
   }
 });
 
