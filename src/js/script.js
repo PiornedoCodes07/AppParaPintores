@@ -210,7 +210,8 @@ submit.addEventListener("click", function () {
   const totalWall = widthFloat * lengthFloat;
 
   //VARIAVEL COM O VALOR TOTAL DA MULTIPLICAÇÂO
-  const total = totalWall * valorTintaSelecionada;
+  const totalCount = totalWall * valorTintaSelecionada;
+  const total = totalCount.toFixed(2);
 
   //Criando modal total
   const divModal = document.createElement("div");
