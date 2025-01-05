@@ -225,7 +225,8 @@ submit.addEventListener("click", function () {
     lengthFloat = lengthFloat / 1000;
   }
 
-  const totalWall = widthFloat * lengthFloat;
+  const totalWallcount = widthFloat * lengthFloat;
+  const totalWall = totalWallcount.toFixed(2);
 
   //VARIAVEL COM O VALOR TOTAL DA MULTIPLICAÇÂO
   const totalCount = totalWall * valorTintaSelecionada;
